@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibStore</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            box-sizing: border-box;
+            background: #f5f5f5;
+            font-family: "Roboto", sans-serif;
+        }
+        nav{
+            display: flex;
+            justify-content: space-around;
+            min-height: 6vh;
+            background-color: #f5f5f5;
+            align-items: center;
+        }
+        .logo{
+            margin-top: 15px;
+            font-size: 16px;
+        }
+        .logo img{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .logo h1{
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 20px;
+            letter-spacing: 1px;
+        }
+
+        .logo a{
+            color: #d96500;
+            text-decoration: none;
+        }
+        .nav_links{
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-around;
+            width: 30%;
+        }
+        .nav_links li{
+            list-style: none;
+        }
+        .nav_links li a{
+            display: inline-block;
+            vertical-align: middle;
+            text-decoration: none;
+            color: #d96500;
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        .pre{
+           color: #111;
+        }
+        .container{
+            padding-left: 20px;
+            padding-right: 20px;
+            max-width: 1100px;
+            margin: auto;
+            position: relative;
+        }
+        .banner{
+            padding-top: 220px;
+            padding-bottom: 280px;
+        }
+        .book{
+           position: absolute;
+           right: 0px;
+           top: 110px;
+        }
+        .title{
+             font-size: 50px;
+             max-width: 680px;
+        }
+        @media (min-width: 0) and (max-width: 800px){
+            .nav_links{
+                width: 60%;
+            }
+        }
+        @media screen and (max-width: 1200px){
+            .container{
+                max-width: 1000px;
+            }
+            .nav_links{
+                width: 80%;
+            }
+            .title{
+                font-size: 40px;
+                max-width: 400px;
+            }
+            
+        }
+        @media (max-width: 750px) {
+            nav{
+                flex-direction: column;
+            }
+        }
+        @media (max-width: 918px) {
+            .book{
+                display: none;
+            }
+            .title{
+                max-width: 600px;
+            }
+            .banner{
+                padding-top: 100px;
+                padding-bottom: 100px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+                <div class = "logo">
+                    <a href=""><img src="img/Logo.svg" alt=""></a>              
+                    <h1><a href=""><span class="pre">Lib</span>Store
+                    </a></h1>
+                </div>
+                <ul class = "nav_links">
+                <li><a href="">Library</a></li>
+                <li><a href="">Book</a></li>
+                <li><a href="">Manga</a></li>
+                <li><a href="">Profile</a></li>
+                </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+     <div class="banner">
+            <h1 class = "title">MyBook — читайте и слушайте по одной подписке</h1>
+            <img class = "book" src="img/banner.png" alt="">
+      </div>
+    </div>
+</body>
+</html>
