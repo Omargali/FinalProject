@@ -62,7 +62,7 @@
             margin-top: 15px;
             display: flex;
             justify-content: space-around;
-            width: 30%;
+            width: 40%;
         }
 
         .nav_links li {
@@ -206,6 +206,7 @@
             display: block;
             margin: 10px auto 10px;
             height: 250px;
+            width: 164px;
             object-fit: cover;
             border-radius: 5px;
             box-shadow: 0 10px 15px grey;
@@ -270,11 +271,16 @@
             font-weight: 600;
             margin-bottom: 5px;
         }
-        .content a{
-            text-decoration: none;
+        .content .author{
             font-size: 16px;
             font-weight: 600;
            color: #d96500;
+        }
+        .content p{
+            color: black;
+        }
+        .item a{
+            text-decoration: none;
         }
         .textfor h1{
             padding-top: 40px;
@@ -308,6 +314,10 @@
             margin-right: 2vw;
             color: #d96500;
         }
+        .con a{
+            text-decoration: none;
+            color: #d96500;
+        }
         @media (max-width: 816px) {
             .footer{
                 display: inline-block;
@@ -324,6 +334,13 @@
                 text-align: center;
             }
         }
+        .hov span:hover{
+            color: #ff8922;
+        }
+        .con a:hover{
+            opacity: 0.8;
+        }
+
        
     </style>
     </style>
@@ -333,14 +350,14 @@
     <header>
         <nav>
             <div class="logo">
-                <a href=""><img src="img/Logo.svg" alt=""></a>
-                <h1><a href=""><span class="pre">Lib</span>Store
+                <a href="/main_page/index.html"><img src="img/Logo.svg" alt=""></a>
+                <h1><a href="/main_page/index.html"><span class="pre">Lib</span>Store
                     </a></h1>
             </div>
             <ul class="nav_links">
                 <li><a href="">Library</a></li>
                 <li><a href="">Book</a></li>
-                <li><a href="">Manga</a></li>
+                <li><a href="/Manga.html">Manga</a></li>
                 <li><a href="">Profile</a></li>
             </ul>
         </nav>
@@ -366,42 +383,45 @@
         <div class ="formList" id="formList1">
             <div id="list">
                 <div class="item">
+                    <a href="">
                     <img class="avatar" src="img/lf1.webp" alt="">
                     <div class="star">
                         <span class="full">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
                         </span>
                         <span class="empty">
-                            <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                         </span>
                     </div>
                     <div class="content">
                         <p>A World of Curiosities</p>
-                        <a href=""><p>Louise Penny</p></a>
+                        <p class = "author">Louise Penny</p>
                     </div>
+                    </a>
                 </div>
                 <div class="item">
+                    <a href="">
                     <img class="avatar" src="img/lf2.webp" alt="">
                     <div class="star">
                         <span class="full">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
-                        </span>
-                        <span class="empty">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                         </span>
                     </div>
                     <div class="content">
                         <p>The Maid</p>
-                        <a href=""><p>Nita Prose</p></a>
+                        <p  class = "author">Nita Prose</p>
                     </div>
+                </a>
                 </div>
                 <div class="item">
+                    <a href="">
                     <img class="avatar" src="img/lf3.webp" alt="">
                     <div class="star">
                         <span class="full">
@@ -416,46 +436,52 @@
                     </div>
                     <div class="content">
                         <p>The Paris Apartment</p>
-                        <a href=""><p>Lucy Foley</p></a>
+                        <p class = "author">Lucy Foley</p>
                     </div>
+                </a>
                 </div>
                 <div class="item">
+                    <a href="">
                     <img class="avatar" src="img/lf4.webp" alt="">
                     <div class="star">
                         <span class="full">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
                         </span>
                         <span class="empty">
-                            <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                         </span>
                     </div>
                     <div class="content">
                         <p>All Good People Here</p>
-                        <a href=""><p>Ashley Flowers</p></a>
+                        <p class = "author">Ashley Flowers</p>
                     </div>
+                </a>
                 </div>
                 <div class="item">
+                    <a href="">
                     <img class="avatar" src="img/lf5.webp" alt="">
                     <div class="star">
                         <span class="full">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
                         </span>
                         <span class="empty">
+                            <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                         </span>
                     </div>
                     <div class="content">
                         <p>Fox Creek</p>
-                        <a href=""><p>William Kent Krueger</p></a>
+                        <p class = "author">William Kent Krueger</p>
                     </div>
+                </a>
                 </div>
                 <div class="item">
+                    <a href="">
                     <img class="avatar" src="img/lf6.webp" alt="">
                     <div class="star">
                         <span class="full">
@@ -470,26 +496,29 @@
                     </div>
                     <div class="content">
                         <p>The Butcher</p>
-                        <a href=""><p>Alaina Urquhart</p></a>
+                        <p  class = "author">Alaina Urquhart</p>
                     </div>
+                </a>
                 </div>
                 <div class="item">
+                    <a href="">
                     <img class="avatar" src="img/lf7.webp" alt="">
                     <div class="star">
                         <span class="full">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
                         </span>
                         <span class="empty">
-                            <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                         </span>
                     </div>
                     <div class="content">
                         <p>The Bullet That Missed</p>
-                        <a href=""><p>Richard Osman</p></a>
+                        <p class = "author">Richard Osman</p>
                     </div>
+                </a>
                 </div>
             </div>
         </div>
@@ -511,130 +540,160 @@
     <div class ="formList" id="formList2">
         <div id="list">
             <div class="item">
-                <img class="avatar" src="img/3.jpg" alt="">
+                <a href="">
+                <img class="avatar" src="/main_page/img/in-search-of-lost-time.jpg" alt="">
                 <div class="star">
                     <span class="full">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
-                    </span>
-                    <span class="empty">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </span>
                 </div>
                 <div class="content">
                     <p>In Search of Lost Time</p>
-                    <a href=""><p>Marcel Proust</p></a>
+                    <p class = "author">Marcel Proust</p>
                 </div>
+            </a>
             </div>
             <div class="item">
-                <img class="avatar" src="img/4.jpg" alt="">
+                <a href="">
+                <img class="avatar" src="/main_page/img/Ulysses.jpg" alt="">
                 <div class="star">
                     <span class="full">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </span>
                     <span class="empty">
-                        <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </span>
                 </div>
                 <div class="content">
                     <p>Ulysses</p>
-                    <a href=""><p>James Joyce</p></a>
+                    <p class = "author">James Joyce</p>
                 </div>
+            </a>
             </div>
             <div class="item">
-                <img class="avatar" src="img/5.jpg" alt="">
+                <a href="">
+                <img class="avatar" src="/main_page/img/don-quixote.jpg" alt="">
                 <div class="star">
                     <span class="full">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
-                    </span>
-                    <span class="empty">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </span>
                 </div>
                 <div class="content">
                     <p>Don Quixote</p>
-                    <a href=""><p>Miguel de Cervantes</p></a>
+                    <p class = "author">Miguel de Cervantes</p>
                 </div>
+            </a>
             </div>
             <div class="item">
-                <img class="avatar" src="img/6.jpg" alt="">
+                <a href="">
+                <img class="avatar" src="img/WarAndPiece.jpg" alt="">
                 <div class="star">
                     <span class="full">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </span>
                     <span class="empty">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
                     </span>
                 </div>
                 <div class="content">
                     <p>War and Peace</p>
-                    <a href=""><p>Leo Tolstoy</p></a>
+                    <p class = "author">Leo Tolstoy</p>
                 </div>
+            </a>
             </div>
             <div class="item">
-                <img class="avatar" src="img/7.jpg" alt="">
+                <a href="">
+                <img class="avatar" src="img/tdc.jpg" alt="">
                 <div class="star">
                     <span class="full">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </span>
                     <span class="empty">
-                        <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </span>
                 </div>
                 <div class="content">
                     <p>The Divine Comedy</p>
-                    <a href=""><p>Dante Alighieri</p></a>
+                    <p class = "author">Dante Alighieri</p>
                 </div>
+            </a>
             </div>
             <div class="item">
-                <img class="avatar" src="img/anna.jpg" alt="">
+                <a href="">
+                <img class="avatar" src="img/AnnaK.jpg" alt="">
                 <div class="star">
                     <span class="full">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </span>
                     <span class="empty">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
                     </span>
                 </div>
                 <div class="content">
                     <p>Anna Karenina</p>
-                    <a href=""><p>Leo Tolstoy</p></a>
+                    <p class = "author">Leo Tolstoy</p>
                 </div>
+            </a>
             </div>
             <div class="item">
-                <img class="avatar" src="img/madame.jpg" alt="">
+                <a href="">
+                <img class="avatar" src="img/madame-bovary.jpg" alt="">
                 <div class="star">
                     <span class="full">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </span>
                     <span class="empty">
-                        <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </span>
                 </div>
                 <div class="content">
                     <p>Madame Bovary</p>
-                    <a href=""><p>Gustave Flaubert</p></a>
+                    <p class = "author">Gustave Flaubert</p>
                 </div>
+            </a>
+            </div>
+            <div class="item">
+                <a href="">
+                <img class="avatar" src="img/harry.jpg" alt="">
+                <div class="star">
+                    <span class="full">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="empty">
+                    </span>
+                </div>
+                <div class="content">
+                    <p>Harry Potter</p>
+                   <p class = "author">Joanne Rowling</p>
+                </div>
+                </a>
             </div>
         </div>
     </div>
@@ -656,189 +715,212 @@
     <div class ="formList" id="formList3">
         <div id="list">
             <div class="item">
+                <a href="">
                 <img class="avatar" src="img/One-Piece.jpg" alt="">
                 <div class="star">
                     <span class="full">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </span>
                     <span class="empty">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
                     </span>
                 </div>
                 <div class="content">
                     <p>One Piece</p>
-                    <a href=""><p>Eiichiro Oda</p></a>
+                    <p class = "author">Eiichiro Oda</p>
                 </div>
+            </a>
             </div>
             <div class="item">
+                <a href="">
                 <img class="avatar" src="img/Naruto.jpg" alt="">
                 <div class="star">
                     <span class="full">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </span>
                     <span class="empty">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
                     </span>
                 </div>
                 <div class="content">
                     <p>Naruto</p>
-                    <a href=""><p>Masashi Kishimoto</p></a>
+                    <p class = "author">Masashi Kishimoto</p>
                 </div>
+            </a>
             </div>
             <div class="item">
+                <a href="">
                 <img class="avatar" src="img/DB.png" alt="">
                 <div class="star">
                     <span class="full">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </span>
                     <span class="empty">
-                        <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </span>
                 </div>
                 <div class="content">
                     <p>Dragon Ball</p>
-                    <a href=""><p>Akira Toriyama</p></a>
+                    <p  class = "author">Akira Toriyama</p>
                 </div>
+            </a>
             </div>
             <div class="item">
+                <a href="">
                 <img class="avatar" src="img/Demon-Slayer.jpg" alt="">
                 <div class="star">
                     <span class="full">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </span>
                     <span class="empty">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
                     </span>
                 </div>
                 <div class="content">
                     <p>Demon Slayer</p>
-                    <a href=""><p>Koyoharu Gotoge</p></a>
+                    <p class = "author">Koyoharu Gotoge</p>
                 </div>
+            </a>
             </div>
             <div class="item">
+                <a href="">
                 <img class="avatar" src="img/Hunter-x-Hunter.jpg" alt="">
                 <div class="star">
                     <span class="full">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </span>
                     <span class="empty">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
                     </span>
                 </div>
                 <div class="content">
                     <p>Hunter x Hunter</p>
-                    <a href=""><p>Yoshihiro Togashi</p></a>
+                    <p class = "author">Yoshihiro Togashi</p>
                 </div>
+            </a>
             </div>
 
             <div class="item">
+                <a href="">
                 <img class="avatar" src="img/Akira.jpg" alt="">
                 <div class="star">
                     <span class="full">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </span>
                     <span class="empty">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
+
                     </span>
                 </div>
                 <div class="content">
                     <p>Akira</p>
-                    <a href=""><p>Katsuhiro Otomo</p></a>
+                    <p  class = "author">Katsuhiro Otomo</p>
                 </div>
+            </a>
             </div>
 
             <div class="item">
+                <a href="">
                 <img class="avatar" src="img/Fullmetal-Alchemist.jpg" alt="">
                 <div class="star">
                     <span class="full">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </span>
                     <span class="empty">
-                        <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </span>
                 </div>
                 <div class="content">
                     <p>Fullmetal Alchemist</p>
-                    <a href=""><p>Hiromu Arakawa</p></a>
+                   <p  class = "author">Hiromu Arakawa</p>
                 </div>
+            </a>
             </div>
 
             <div class="item">
+                <a href="">
                 <img class="avatar" src="img/Atack.jpg" alt="">
                 <div class="star">
                     <span class="full">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </span>
                     <span class="empty">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
                     </span>
                 </div>
                 <div class="content">
                     <p>Attack on Titan</p>
-                    <a href=""><p>Hajime Isayama</p></a>
+                 <p class = "author">Hajime Isayama</p>
                 </div>
+            </a>
             </div>
 
             <div class="item">
+                <a href="">
                 <img class="avatar" src="img/JoJo.jpg" alt="">
                 <div class="star">
                     <span class="full">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </span>
                     <span class="empty">
-                        <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </span>
                 </div>
                 <div class="content">
                     <p>JoJo’s Bizarre Adventure</p>
-                    <a href=""><p>Hirohiko Araki</p></a>
+                  <p class = "author">Hirohiko Araki</p>
                 </div>
+            </a>
             </div>
 
             <div class="item">
+
+                <a href="">
                 <img class="avatar" src="img/Death-Note.jpg" alt="">
                 <div class="star">
                     <span class="full">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </span>
                     <span class="empty">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
                     </span>
                 </div>
                 <div class="content">
                     <p>Death Note</p>
-                    <a href=""><p>Tsugumi Ohba</p></a>
+                    <p class = "author">Tsugumi Ohba</p>
                 </div>
+                
+            </a>
             </div>
         </div>
     </div>
@@ -852,31 +934,30 @@
         <div class="left_box">
             <h4>Follow the news</h4>
             <div class="con">
-                <a href=""><span class="fab fa-telegram"></span></a>
-                <a href=""><span class="fab fa-instagram"></span></a>
-                <a href=""><span class="fab fa-youtube"></span></a>
-                <a href=""><span class="fab fa-github"></span></a>
+                <a class = "hov" href="https://t.me/cernvery" target="_blank"><span class="fab fa-telegram"></span></a>
+                <a class = "hov" href="https://www.instagram.com" target="_blank"><span class="fab fa-instagram"></span></a>
+                <a class = "hov" href="https://www.youtube.com" target="_blank"><span class="fab fa-youtube"></span></a>
+                <a class = "hov" href="https://github.com/Omargali/FinalProject.git" target="_blank"><span class="fab fa-github"></span></a>
             </div>
         </div>
 
         <div class="center_box">
             <h4>Support service</h4>
             <div class="con">
-                <span>FQA</span>
-                <span>support@libstore.sdu</span>
-                <span>8 877 333 22 11</span>
+                <span><a href="mailto:finalproject@gmail.com">support@libstore.sdu</a></span>
+                <span><a href="tel:+79993339999">8 747 210 10 70</a></span>
             </div>
         </div>
         <div class="right_box">
-            <h4>Follow the news</h4>
+            <h4>We accept for payment</h4>
             <div class="con">
-                <span><a href=""><img src="img/app-icon.png" alt="" width="30px">
+                <span><a href="https://kaspi.kz" target="_blank"><img src="img/app-icon.png" alt="" width="30px">
                 </a></span>
 
-                <span><a href=""><img src="img/icons8-paypal.svg" alt="" width="30px"></a></span>
+                <span><a href="https://www.paypal.com/ru/home" target="_blank"><img src="img/icons8-paypal.svg" alt="" width="30px"></a></span>
 
-                <span><a href=""><img src="img/icons8-виза.svg" alt="" width="30px"></a></span>
-                <span> <a href=""><img src="img/icons8-логотип-mastercard.svg" alt="" width="30px"></a></span>
+                <span><a href="https://www.visa.com.kz/ru_KZ" target="_blank"><img src="img/icons8-виза.svg" alt="" width="30px"></a></span>
+                <span> <a href="https://www.mastercard.kz/ru-kz.html" target="_blank"><img src="img/icons8-логотип-mastercard.svg" alt="" width="30px"></a></span>
   
             </div>
         </div>
