@@ -7,14 +7,17 @@
         $password = $_POST["password"];
         $dublicate = mysqli_query($conn, "SELECT * FROM users_lab8 WHERE username = '$username' or email = '$email'");
         if(mysqli_num_rows($dublicate)>0){
-             echo  '<script>document.getElementById("taken").style.display = none;</script>';
+            //   echo  '<script>document.getElementById("taken").style.display = none;</script>';
+                $uerror = "Sorry, email or username already exist";
         }
+        
         else{
+            $noteer = " ";
             $query = "INSERT INTO users_lab8 VALUES ('$email', '$username', '$password')";
             mysqli_query($conn, $query);
             header("Location: index.html");
-            //echo
-            // "<script>alert('Registration successful')</script>"; 
+            echo
+             "<script>alert('Registration successful')</script>"; 
         }
     }
     
@@ -133,12 +136,12 @@
         }
         .taken{
             margin-top: 15px;
-            color: #fff;
-            border: 1.2px solid #F55D7F;
+            color:  #F55D7F;
+           
             padding: 10px;
             border-radius: 15px;
-            background: #F55D7F;
-            display: none;
+            
+            
         }
     </style>
 </head>
@@ -161,7 +164,20 @@
                         <input type="password" name="password" placeholder="Password" required >
                     </div>
                     <p>Lost password <a href="#">Click here</a></p>
-                    <div class="taken" id="taken">Username or email has already taken</div>
+                    <!-- <div class="taken" id="taken">Username or email has already taken</div> -->
+                    <div class="taken">
+                        <?php if(isset($uerror)):?>
+                        <?php echo $uerror?>
+                        <?php elseif(isset($noteer)):?>
+                        <?php echo '<script>document.getElementById("taken").style.display = none;</script>' ?>
+                        <?php endif?>
+                       
+                    </div>
+                    
+                    
+                   
+                    
+                   
                 </div>
                 <div class="btn-field">
                     <button type="submit" name="submit" id="signupBtn">Sign Up</button>
@@ -171,6 +187,9 @@
                 </div>
             </form>
         </div>
-    </div>   
+    </div>  
+    <script>
+
+    </script> 
 </body>
 </html> 
