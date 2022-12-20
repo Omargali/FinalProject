@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shoutcut icon" href="/main_page/img/Logo.svg">
+    <title>Book</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:wght@600;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            box-sizing: border-box;
+            background: #f5f5f5;
+            font-family: "Roboto", sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            min-height: 6vh;
+            background-color: #f5f5f5;
+            align-items: center;
+        }
+
+        .logo {
+            margin-top: 15px;
+            font-size: 16px;
+        }
+
+        .logo img {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .logo h1 {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 22px;
+            letter-spacing: 2px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+        }
+
+        .logo a {
+            color: #d96500;
+            text-decoration: none;
+        }
+
+        .nav_links {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-around;
+            width: 40%;
+        }
+
+        .nav_links li {
+            list-style: none;
+        }
+
+        .nav_links li a {
+            display: inline-block;
+            vertical-align: middle;
+            text-decoration: none;
+            color: #d96500;
+            font-size: 17px;
+            letter-spacing: 1px;
+            font-weight: 800;
+        }
+
+        .pre {
+            color: #111;
+        }
+
+        .container {
+            padding-left: 20px;
+            padding-right: 20px;
+            max-width: 1100px;
+            margin: auto;
+            position: relative;
+        }
+
+        .banner {
+            padding-top: 220px;
+            padding-bottom: 280px;
+        }
+
+        .book {
+            position: absolute;
+            right: 0px;
+            top: 110px;
+        }
+
+        .title {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 48px;
+            max-width: 680px;
+        }
+
+        @media (min-width: 0) and (max-width: 800px) {
+            .nav_links {
+                width: 60%;
+            }
+        }
+
+        @media screen and (max-width: 1200px) {
+            .container {
+                max-width: 1000px;
+            }
+
+            .nav_links {
+                width: 80%;
+            }
+
+            .title {
+                font-size: 40px;
+                max-width: 400px;
+            }
+
+        }
+
+        @media (max-width: 750px) {
+            nav {
+                flex-direction: column;
+            }
+
+            .title {
+                font-size: 30px;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 918px) {
+            .book {
+                display: none;
+            }
+
+            .title {
+                max-width: 600px;
+            }
+
+            .banner {
+                padding-top: 100px;
+                padding-bottom: 100px;
+            }
+        }
+
+
+        .ava {
+            width: 100px;
+            height: 150px;
+            border-radius: 10%;
+            box-shadow: 5px 5px 14px rgba(0, 0, 0, 0.25);
+        }
+        .info {
+            background: white;
+            padding: 20px 80px 20px 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            display: flex;
+        }
+
+        .info-text {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 30px;
+        }
+
+        .info-text p {
+            color: black;
+            font-size: 16px;
+        }
+
+        .info-text h3 {
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        .info-text .author {
+            color: #d96500;
+        }
+
+        .container {
+            max-width: 1170px;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        .container h1 {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .container a {
+            text-decoration: none;
+        }
+
+        .M {
+            color: #d96500;
+        }
+        @media (max-width:700px) {
+            .info {
+                text-align: center;
+                display: block;
+                padding: 20px 30px 20px 30px;
+            }
+            .info-text {
+            margin-left: 0px;
+        }
+        }
+
+        @media (max-width:440px) {
+            .info-text p {
+                font-size:12px;
+                padding: 0;
+            }
+            .info{
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .info-text h3{
+              font-size: 18px;
+            }
+        }
+        .footer{
+            margin-top: 80px;
+            padding: 50px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .left_box span{
+            margin-right: 1.1vw;
+            font-size: 29px;
+            color: #d96500;
+        }
+        .con{
+            margin: 20px 0;
+        }
+        .right_box span{
+            margin-right: 1.1vw;
+        }
+        .center_box span{
+            margin-right: 2vw;
+            color: #d96500;
+        }
+        .con a{
+            text-decoration: none;
+            color: #d96500;
+        }
+        @media (max-width: 816px) {
+            .footer{
+                display: inline-block;
+
+            }
+        }
+        @media (max-width: 475px) {
+            .footer{
+                display: inline-block;
+                text-align: center;
+            }
+            .center_box span{
+                display: inline-block;
+                text-align: center;
+            }
+        }
+        .hov span:hover{
+            color: #ff8922;
+        }
+        .con a:hover{
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/main_page/index.html"><img src="/main_page/img/Logo.svg" alt=""></a>
+                <h1><a href="/main_page/index.html"><span class="pre">Lib</span>Store
+                    </a></h1>
+            </div>
+            <ul class="nav_links">
+                <li><a href="/Library.html">Library</a></li>
+                <li><a href="/Book.html">Book</a></li>
+                <li><a href="/Manga.html">Manga</a></li>
+                <li><a href="">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1> <span class="M">B</span>ook</h1>
+        <a href="/books/HarryPotter.html">
+            <div class="info">
+                <img src="/main_page/img/harry.jpg" class="ava">
+                <div class="info-text">
+                    <h3>Harry Potter and the Philosopher's Stone</h3>
+                    <h3 class="author">Joanne Rowling</h3>
+                    <p>Harry Potter and the Philosopher's Stone is a 1997 fantasy novel written by British author J. K. Rowling. The first novel in the Harry Potter series and Rowling's debut novel, it follows Harry Potter, a young wizard who discovers his magical heritage on his eleventh birthday, when he receives a letter of acceptance to Hogwarts School of Witchcraft and Wizardry. </p>
+                </div>
+            </div>
+        </a>
+
+        <a href="/books/MadameBovary.html">
+            <div class="info">
+                <img src="/main_page/img/madame-bovary.jpg" alt="Naruto" class="ava">
+                <div class="info-text">
+                    <h3>Madame Bovary</h3>
+                    <h3 class="author">Gustave Flaubert</h3>
+                    <p>Madame Bovary, originally published as Madame Bovary: Provincial Manners, is a novel by French writer Gustave Flaubert, published in 1856. The eponymous character lives beyond her means in order to escape the banalities and emptiness of provincial life.</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="/books/AnnaKarenina.html">
+            <div class="info">
+                <img src="/main_page/img/AnnaK.jpg" class="ava">
+                <div class="info-text">
+                    <h3>Anna Karenina</h3>
+                    <h3 class="author">Leo Tolstoy</h3>
+                    <p>Anna Karenina is a novel by the Russian author Leo Tolstoy, first published in book form in 1878. Widely considered to be one of the greatest works of literature ever written, Tolstoy himself called it his first true novel. </p>
+                </div>
+            </div>
+        </a>
+
+        <a href="/books/TheDivineComedy.html">
+            <div class="info">
+                <img src="/main_page/img/tdc.jpg" class="ava">
+                <div class="info-text">
+                    <h3>The Divine Comedy</h3>
+                    <h3 class="author">Dante Alighier</h3>
+                    <p>The Divine Comedy is an Italian narrative poem by Dante Alighieri, begun c. 1308 and completed in around 1321, shortly before the author's death. It is widely considered the pre-eminent work in Italian literature and one of the greatest works of world literature.</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="/books/WarandPeace.html">
+            <div class="info">
+                <img src="/main_page/img/WarAndPiece.jpg" class="ava">
+                <div class="info-text">
+                    <h3>War and Peace</h3>
+                    <h3 class="author">Leo Tolstoy</h3>
+                    <p>War and Peace is a literary work by the Russian author Leo Tolstoy that mixes fictional narrative with chapters on history and philosophy. It was first published serially, then published in its entirety in 1869.</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="/books/DonQuixote.html">
+            <div class="info">
+                <img src="/main_page/img/don-quixote.jpg" class="ava">
+                <div class="info-text">
+                    <h3>Don Quixote</h3>
+                    <h3 class="author">Miguel de Cervantes</h3>
+                    <p>Don Quixote is a Spanish epic novel by Miguel de Cervantes. Originally published in two parts, in 1605 and 1615, its full title is The Ingenious Gentleman Don Quixote of La Mancha or, in Spanish, El ingenioso hidalgo don Quixote de la Mancha.</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="/books/Ulysses.html">
+            <div class="info">
+                <img src="/main_page/img/Ulysses.jpg" class="ava">
+                <div class="info-text">
+                    <h3>Ulysses</h3>
+                    <h3 class="author">James Joyce</h3>
+                    <p>Ulysses is a modernist novel by Irish writer James Joyce. Parts of it were first serialized in the American journal The Little Review from March 1918 to December 1920, and the entire work was published in Paris by Sylvia Beach on 2 February 1922, Joyce's 40th birthday.</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="/books/InSearchofLostTime.html">
+            <div class="info">
+                <img src="/main_page/img/in-search-of-lost-time.jpg" class="ava">
+                <div class="info-text">
+                    <h3>In Search of Lost Time</h3>
+                    <h3 class="author">Marcel Proust</h3>
+                    <p>In Search of Lost Time, first translated into English as Remembrance of Things Past, and sometimes referred to in French as La Recherche, is a novel in seven volumes by French author Marcel Proust. This early 20th-century work is his most prominent, known both for its length and its theme of involuntary memory.</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="/books/TheMain.html">
+            <div class="info">
+                <img src="/main_page/img/lf2.webp" class="ava">
+                <div class="info-text">
+                    <h3>The Maid</h3>
+                    <h3 class="author">Nita Prose</h3>
+                    <p>The Maid: A Novel is a 2022 murder mystery debut novel by Canadian author Nita Prose. In 2021, a film adaptation of the novel was announced, with Florence Pugh cast in the lead role.</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="/books/WorldCuriosities.html">
+            <div class="info">
+                <img src="/main_page/img/lf1.webp" class="ava">
+                <div class="info-text">
+                    <h3>A World of Curiositie</h3>
+                    <h3 class="author">Louise Penny</h3>
+                    <p>Book 18 in the acclaimed and number one-bestselling Three Pines series featuring the beloved Chief Inspector Armand Gamache.'Electrifying drama ... the bodies pile up, the intensity and horror are reminiscent of Thomas Harris at his finest.</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="/books/GoodPeople.html">
+            <div class="info">
+                <img src="/main_page/img/lf4.webp" class="ava">
+                <div class="info-text">
+                    <h3>All Good People Here</h3>
+                    <h3 class="author">Nita Prose</h3>
+                    <p>In the propulsive debut novel from the host of the #1 true crime podcast Crime Junkie, a journalist uncovers her hometown’s dark secrets when she becomes obsessed with the unsolved murder of her childhood neighbor—and the disappearance of another girl twenty years later.</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!-- footer -->
+    <div class="footer">
+        <div class="left_box">
+            <h4>Follow the news</h4>
+            <div class="con">
+                <a class = "hov" href="https://t.me/cernvery" target="_blank"><span class="fab fa-telegram"></span></a>
+                <a class = "hov" href="https://www.instagram.com" target="_blank"><span class="fab fa-instagram"></span></a>
+                <a class = "hov" href="https://www.youtube.com" target="_blank"><span class="fab fa-youtube"></span></a>
+                <a class = "hov" href="https://github.com/Omargali/FinalProject.git" target="_blank"><span class="fab fa-github"></span></a>
+            </div>
+        </div>
+
+        <div class="center_box">
+            <h4>Support service</h4>
+            <div class="con">
+                <span><a href="mailto:finalproject@gmail.com">support@libstore.sdu</a></span>
+                <span><a href="tel:+79993339999">8 747 210 10 70</a></span>
+            </div>
+        </div>
+        <div class="right_box">
+            <h4>We accept for payment</h4>
+            <div class="con">
+                <span><a href="https://kaspi.kz" target="_blank"><img src="/main_page/img/app-icon.png" alt="" width="30px">
+                </a></span>
+
+                <span><a href="https://www.paypal.com/ru/home" target="_blank"><img src="/main_page/img/icons8-paypal.svg" alt="" width="30px"></a></span>
+
+                <span><a href="https://www.visa.com.kz/ru_KZ" target="_blank"><img src="/main_page/img/icons8-виза.svg" alt="" width="30px"></a></span>
+                <span> <a href="https://www.mastercard.kz/ru-kz.html" target="_blank"><img src="/main_page/img/icons8-логотип-mastercard.svg" alt="" width="30px"></a></span>
+  
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

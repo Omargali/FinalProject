@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:wght@600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background: #f5f5f5;
+    font-family: "Roboto", sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    min-height: 6vh;
+    background-color: #f5f5f5;
+    align-items: center;
+}
+
+.logo {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.logo img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo h1 {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+
+.logo a {
+    color: #d96500;
+    text-decoration: none;
+}
+
+.nav_links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.nav_links li {
+    list-style: none;
+}
+
+.nav_links li a {
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #d96500;
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+
+.pre {
+    color: #111;
+}
+
+@media (min-width: 0) and (max-width: 800px) {
+    .nav_links {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .nav_links {
+        width: 80%;
+    }
+
+    .title {
+        font-size: 40px;
+        max-width: 400px;
+    }
+
+}
+
+@media (max-width: 750px) {
+    nav {
+        flex-direction: column;
+    }
+}
+.ava {
+    width: 180px;
+    height: 280px;
+    border-radius: 10%;
+    box-shadow: 5px 5px 14px rgba(0, 0, 0, 0.25);
+}
+
+.info {
+    background: white;
+    padding: 80px 80px 100px 30px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.info-text {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+.info-text p {
+    color: black;
+    font-size: 16px;
+    margin-top: 40px;
+}
+
+.info-text h2 {
+    color: black;
+    margin-bottom: 10px;
+}
+
+.info-text .name {
+    color: #d96500;
+    font-size: 20px;
+}
+
+.info-text .type {
+    font-size: 20px;
+}
+
+.ing {
+    margin: 10px 0;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.container h1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.container a {
+    text-decoration: none;
+}
+
+.M {
+    color: #d96500;
+}
+
+
+@media (max-width:700px) {
+    .info {
+        text-align: center;
+        display: block;
+        padding: 20px 30px 20px 30px;
+    }
+
+    .info-text {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width:440px) {
+    .info-text p {
+        font-size: 12px;
+        padding: 0;
+    }
+
+    .info {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .info-text h3 {
+        font-size: 18px;
+    }
+}
+.star{
+    margin-bottom: 20px;
+}
+.full i {
+    font-size: 20px;
+    color: #ff9c1a;
+}
+.empty i{
+    font-size: 20px;
+    color: #e6e6e6;
+}
+.back img{
+    padding-left: 10px;
+}
+.back button{
+    border: none ;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.footer {
+    margin-top: 80px;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.left_box span {
+    margin-right: 1.1vw;
+    font-size: 29px;
+    color: #d96500;
+}
+
+.con {
+    margin: 20px 0;
+}
+
+.right_box span {
+    margin-right: 1.1vw;
+}
+
+.center_box span {
+    margin-right: 2vw;
+    color: #d96500;
+}
+
+.con a {
+    text-decoration: none;
+    color: #d96500;
+}
+
+@media (max-width: 816px) {
+    .footer {
+        display: inline-block;
+
+    }
+}
+
+@media (max-width: 475px) {
+    .footer {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .center_box span {
+        display: inline-block;
+        text-align: center;
+    }
+}
+
+.hov span:hover {
+    color: #ff8922;
+}
+
+.con a:hover {
+    opacity: 0.8;
+}

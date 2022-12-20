@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shoutcut icon" href="img/Logo.svg">
+    <title>LibStore</title>
+    <script src="/main_page/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:wght@600;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            box-sizing: border-box;
+            background: #f5f5f5;
+            font-family: "Roboto", sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            min-height: 6vh;
+            background-color: #f5f5f5;
+            align-items: center;
+        }
+
+        .logo {
+            margin-top: 15px;
+            font-size: 16px;
+        }
+
+        .logo img {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .logo h1 {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 22px;
+            letter-spacing: 2px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+        }
+
+        .logo a {
+            color: #d96500;
+            text-decoration: none;
+        }
+
+        .nav_links {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-around;
+            width: 40%;
+        }
+
+        .nav_links li {
+            list-style: none;
+        }
+
+        .nav_links li a {
+            display: inline-block;
+            vertical-align: middle;
+            text-decoration: none;
+            color: #d96500;
+            font-size: 17px;
+            letter-spacing: 1px;
+            font-weight: 800;
+        }
+
+        .pre {
+            color: #111;
+        }
+
+        .container {
+            padding-left: 20px;
+            padding-right: 20px;
+            max-width: 1100px;
+            margin: auto;
+            position: relative;
+        }
+
+        .banner {
+            padding-top: 220px;
+            padding-bottom: 280px;
+        }
+
+        .book {
+            position: absolute;
+            right: 0px;
+            top: 110px;
+        }
+
+        .title {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 48px;
+            max-width: 680px;
+        }
+
+        @media (min-width: 0) and (max-width: 800px) {
+            .nav_links {
+                width: 60%;
+            }
+        }
+
+        @media screen and (max-width: 1200px) {
+            .container {
+                max-width: 1000px;
+            }
+
+            .nav_links {
+                width: 80%;
+            }
+
+            .title {
+                font-size: 40px;
+                max-width: 400px;
+            }
+
+        }
+
+        @media (max-width: 750px) {
+            nav {
+                flex-direction: column;
+            }
+
+            .title {
+                font-size: 30px;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 918px) {
+            .book {
+                display: none;
+            }
+
+            .title {
+                max-width: 600px;
+            }
+
+            .banner {
+                padding-top: 100px;
+                padding-bottom: 100px;
+            }
+        }
+
+        /* slider */
+        .op{
+            padding-left: 20px;
+            padding-right: 20px;
+            max-width: 1100px;
+            margin: auto;
+            background: white;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+        .lol {
+
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            height: 430px;
+            align-items: center;
+        }
+
+        .direction1 button {
+            border: none;
+            cursor: pointer;
+            background-color: white;
+            transition: 0.5s;
+        }
+
+        .direction2 button {
+            border: none;
+            cursor: pointer;
+            background-color: white;
+            transition: 0.5s;
+        }
+
+        .direction2 button:hover {
+            opacity: 0, 6;
+        }
+
+
+        .item {
+            width: 200px;
+            height: 350px;
+            overflow: hidden;
+            margin: 0 10px;
+        }
+
+        .item .avatar {
+            display: block;
+            margin: 10px auto 10px;
+            height: 250px;
+            width: 164px;
+            object-fit: cover;
+            border-radius: 5px;
+            box-shadow: 0 10px 15px grey;
+            scroll-snap-align: start;
+            margin-bottom: 15px;
+        }
+
+        .item .content {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .item .star {
+            text-align: center;
+        }
+
+        #list {
+            display: flex;
+            width: max-content;
+        }
+
+        .formList {
+            display: inline-block;
+            width: 1280px;
+            max-width: 100%;
+            overflow: auto;
+            margin: 100px auto;
+            scroll-behavior: smooth;
+            scroll-snap-type: both;
+        }
+
+        .formList::-webkit-scrollbar {
+            display: none;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .item {
+                width: calc(33.3vw - 20px);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .item {
+                width: calc(50vw - 20px);
+            }
+
+            .direction {
+                display: none;
+            }
+        }
+
+        .full i {
+            font-size: 20px;
+            color: #ff9c1a;
+        }
+        .empty i{
+            font-size: 20px;
+            color: #e6e6e6;
+        }
+        .content p{
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .content .author{
+            font-size: 16px;
+            font-weight: 600;
+           color: #d96500;
+        }
+        .content p{
+            color: black;
+        }
+        .item a{
+            text-decoration: none;
+        }
+        .textfor h1{
+            padding-top: 40px;
+            padding-left: 24px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .textfor p{
+            padding-top: 20px;
+            padding-left: 24px;
+            font-size: 18px;
+        }
+        .footer{
+            margin-top: 80px;
+            padding: 50px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .left_box span{
+            margin-right: 1.1vw;
+            font-size: 29px;
+            color: #d96500;
+        }
+        .con{
+            margin: 20px 0;
+        }
+        .right_box span{
+            margin-right: 1.1vw;
+        }
+        .center_box span{
+            margin-right: 2vw;
+            color: #d96500;
+        }
+        .con a{
+            text-decoration: none;
+            color: #d96500;
+        }
+        @media (max-width: 816px) {
+            .footer{
+                display: inline-block;
+
+            }
+        }
+        @media (max-width: 475px) {
+            .footer{
+                display: inline-block;
+                text-align: center;
+            }
+            .center_box span{
+                display: inline-block;
+                text-align: center;
+            }
+        }
+        .hov span:hover{
+            color: #ff8922;
+        }
+        .con a:hover{
+            opacity: 0.8;
+        }
+
+       
+    </style>
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/main_page/index.html"><img src="img/Logo.svg" alt=""></a>
+                <h1><a href="/main_page/index.html"><span class="pre">Lib</span>Store
+                    </a></h1>
+            </div>
+            <ul class="nav_links">
+                <li><a href="/Library.html">Library</a></li>
+                <li><a href="/Book.html">Book</a></li>
+                <li><a href="/Manga.html">Manga</a></li>
+                <li><a href="">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="banner">
+            <h1 class="title">LibStore - read the world's bestsellers and manga absolutely free</h1>
+            <img class="book" src="img/banner.png" alt="">
+        </div>
+    </div>
+
+    <!-- slider -->
+    <div class="op">
+        <div class="textfor">
+            <h1>The best new books</h1>
+            <p>Add the best to "Books" so you don't miss a thing</p>
+        </div>
+    <div class="lol">
+        <div class="direction1">
+            <button id="prev"><img src="/main_page/img/fi-br-angle-leftleft_button.svg" alt=""></button>
+        </div>
+        <div class ="formList" id="formList1">
+            <div id="list">
+                <div class="item">
+                    <a href="/books/WorldCuriosities.html">
+                    <img class="avatar" src="img/lf1.webp" alt="">
+                    <div class="star">
+                        <span class="full">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                        <span class="empty">
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                    </div>
+                    <div class="content">
+                        <p>A World of Curiosities</p>
+                        <p class = "author">Louise Penny</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="/books/TheMain.html">
+                    <img class="avatar" src="img/lf2.webp" alt="">
+                    <div class="star">
+                        <span class="full">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                    </div>
+                    <div class="content">
+                        <p>The Maid</p>
+                        <p  class = "author">Nita Prose</p>
+                    </div>
+                </a>
+                </div>
+                <div class="item">
+                    <a href="/books/TheParisApartment.html">
+                    <img class="avatar" src="img/lf3.webp" alt="">
+                    <div class="star">
+                        <span class="full">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                        <span class="empty">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                    </div>
+                    <div class="content">
+                        <p>The Paris Apartment</p>
+                        <p class = "author">Lucy Foley</p>
+                    </div>
+                </a>
+                </div>
+                <div class="item">
+                    <a href="/books/GoodPeople.html">
+                    <img class="avatar" src="img/lf4.webp" alt="">
+                    <div class="star">
+                        <span class="full">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                        <span class="empty">
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                    </div>
+                    <div class="content">
+                        <p>All Good People Here</p>
+                        <p class = "author">Ashley Flowers</p>
+                    </div>
+                </a>
+                </div>
+                <div class="item">
+                    <a href="/books/FoxCreek.html">
+                    <img class="avatar" src="img/lf5.webp" alt="">
+                    <div class="star">
+                        <span class="full">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                        <span class="empty">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                    </div>
+                    <div class="content">
+                        <p>Fox Creek</p>
+                        <p class = "author">William Kent Krueger</p>
+                    </div>
+                </a>
+                </div>
+                <div class="item">
+                    <a href="/books/TheButcher.html">
+                    <img class="avatar" src="img/lf6.webp" alt="">
+                    <div class="star">
+                        <span class="full">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                        <span class="empty">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                    </div>
+                    <div class="content">
+                        <p>The Butcher</p>
+                        <p  class = "author">Alaina Urquhart</p>
+                    </div>
+                </a>
+                </div>
+                <div class="item">
+                    <a href="/books/TheBullet.html">
+                    <img class="avatar" src="img/lf7.webp" alt="">
+                    <div class="star">
+                        <span class="full">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                        <span class="empty">
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                    </div>
+                    <div class="content">
+                        <p>The Bullet That Missed</p>
+                        <p class = "author">Richard Osman</p>
+                    </div>
+                </a>
+                </div>
+            </div>
+        </div>
+        <div class="direction2">
+            <button id="next"><img src="/main_page/img/right_button.svg" alt=""></button>
+        </div>
+    </div>
+</div>
+<!-- slider-2 -->
+<div class="op">
+    <div class="textfor">
+        <h1>Top 10 Greatest Books of All Time</h1>
+        <p>The Top 10 book chosen by 125 top writers from the book "The Top 10" edited by J. Peder Zane</p>
+    </div>
+<div class="lol">
+    <div class="direction1">
+        <button id="prev2"><img src="/main_page/img/fi-br-angle-leftleft_button.svg" alt=""></button>
+    </div>
+    <div class ="formList" id="formList2">
+        <div id="list">
+            <div class="item">
+                <a href="/books/InSearchofLostTime.html">
+                <img class="avatar" src="/main_page/img/in-search-of-lost-time.jpg" alt="">
+                <div class="star">
+                    <span class="full">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                </div>
+                <div class="content">
+                    <p>In Search of Lost Time</p>
+                    <p class = "author">Marcel Proust</p>
+                </div>
+            </a>
+            </div>
+            <div class="item">
+                <a href="/books/Ulysses.html">
+                <img class="avatar" src="/main_page/img/Ulysses.jpg" alt="">
+                <div class="star">
+                    <span class="full">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="empty">
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                </div>
+                <div class="content">
+                    <p>Ulysses</p>
+                    <p class = "author">James Joyce</p>
+                </div>
+            </a>
+            </div>
+            <div class="item">
+                <a href="/books/DonQuixote.html">
+                <img class="avatar" src="/main_page/img/don-quixote.jpg" alt="">
+                <div class="star">
+                    <span class="full">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                </div>
+                <div class="content">
+                    <p>Don Quixote</p>
+                    <p class = "author">Miguel de Cervantes</p>
+                </div>
+            </a>
+            </div>
+            <div class="item">
+                <a href="/books/WarandPeace.html">
+                <img class="avatar" src="img/WarAndPiece.jpg" alt="">
+                <div class="star">
+                    <span class="full">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="empty">
+                    </span>
+                </div>
+                <div class="content">
+                    <p>War and Peace</p>
+                    <p class = "author">Leo Tolstoy</p>
+                </div>
+            </a>
+            </div>
+            <div class="item">
+                <a href="/books/TheDivineComedy.html">
+                <img class="avatar" src="img/tdc.jpg" alt="">
+                <div class="star">
+                    <span class="full">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="empty">
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                </div>
+                <div class="content">
+                    <p>The Divine Comedy</p>
+                    <p class = "author">Dante Alighieri</p>
+                </div>
+            </a>
+            </div>
+            <div class="item">
+                <a href="/books/AnnaKarenina.html">
+                <img class="avatar" src="img/AnnaK.jpg" alt="">
+                <div class="star">
+                    <span class="full">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="empty">
+                    </span>
+                </div>
+                <div class="content">
+                    <p>Anna Karenina</p>
+                    <p class = "author">Leo Tolstoy</p>
+                </div>
+            </a>
+            </div>
+            <div class="item">
+                <a href="/books/MadameBovary.html">
+                <img class="avatar" src="img/madame-bovary.jpg" alt="">
+                <div class="star">
+                    <span class="full">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="empty">
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                </div>
+                <div class="content">
+                    <p>Madame Bovary</p>
+                    <p class = "author">Gustave Flaubert</p>
+                </div>
+            </a>
+            </div>
+            <div class="item">
+                <a href="/books/HarryPotter.html">
+                <img class="avatar" src="img/harry.jpg" alt="">
+                <div class="star">
+                    <span class="full">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="empty">
+                    </span>
+                </div>
+                <div class="content">
+                    <p>Harry Potter</p>
+                   <p class = "author">Joanne Rowling</p>
+                </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="direction2">
+        <button id="next2"><img src="/main_page/img/right_button.svg" alt=""></button>
+    </div>
+</div>
+</div>
+<!-- slider3 -->
+<div class="op">
+    <div class="textfor">
+        <h1>The 10 Best Manga of All Time</h1>
+        <p>Top 10 Most Popular and Rated Manga in The World</p>
+    </div>
+<div class="lol">
+    <div class="direction1">
+        <button id="prev3"><img src="/main_page/img/fi-br-angle-leftleft_button.svg" alt=""></button>
+    </div>
+    <div class ="formList" id="formList3">
+        <div id="list">
+            <div class="item">
+                <a href="/manga/OnePiece.html">
+                <img class="avatar" src="img/One-Piece.jpg" alt="">
+                <div class="star">
+                    <span class="full">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="empty">
+                    </span>
+                </div>
+                <div class="content">
+                    <p>One Piece</p>
+                    <p class = "author">Eiichiro Oda</p>
+                </div>
+            </a>
+            </div>
+            <div class="item">
+                <a href="/manga/Naruto.html">
+                <img class="avatar" src="img/Naruto.jpg" alt="">
+                <div class="star">
+                    <span class="full">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="empty">
+                    </span>
+                </div>
+                <div class="content">
+                    <p>Naruto</p>
+                    <p class = "author">Masashi Kishimoto</p>
+                </div>
+            </a>
+            </div>
+            <div class="item">
+                <a href="/manga/DragonBall.html">
+                <img class="avatar" src="img/DB.png" alt="">
+                <div class="star">
+                    <span class="full">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="empty">
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                </div>
+                <div class="content">
+                    <p>Dragon Ball</p>
+                    <p  class = "author">Akira Toriyama</p>
+                </div>
+            </a>
+            </div>
+            <div class="item">
+                <a href="/manga/DemonSlayer.html">
+                <img class="avatar" src="img/Demon-Slayer.jpg" alt="">
+                <div class="star">
+                    <span class="full">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="empty">
+                    </span>
+                </div>
+                <div class="content">
+                    <p>Demon Slayer</p>
+                    <p class = "author">Koyoharu Gotoge</p>
+                </div>
+            </a>
+            </div>
+            <div class="item">
+                <a href="/manga/HunterxHunter.html">
+                <img class="avatar" src="img/Hunter-x-Hunter.jpg" alt="">
+                <div class="star">
+                    <span class="full">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="empty">
+                    </span>
+                </div>
+                <div class="content">
+                    <p>Hunter x Hunter</p>
+                    <p class = "author">Yoshihiro Togashi</p>
+                </div>
+            </a>
+            </div>
+
+            <div class="item">
+                <a href="/manga/Akira.html">
+                <img class="avatar" src="img/AKIRA_2.jpg" alt="">
+                <div class="star">
+                    <span class="full">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="empty">
+
+                    </span>
+                </div>
+                <div class="content">
+                    <p>Akira</p>
+                    <p  class = "author">Katsuhiro Otomo</p>
+                </div>
+            </a>
+            </div>
+
+            <div class="item">
+                <a href="/manga/FullmetalAlchemist.html">
+                <img class="avatar" src="img/Fullmetal-Alchemist.jpg" alt="">
+                <div class="star">
+                    <span class="full">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="empty">
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                </div>
+                <div class="content">
+                    <p>Fullmetal Alchemist</p>
+                   <p  class = "author">Hiromu Arakawa</p>
+                </div>
+            </a>
+            </div>
+
+            <div class="item">
+                <a href="/manga/AttackonTitan.html">
+                <img class="avatar" src="img/Atack.jpg" alt="">
+                <div class="star">
+                    <span class="full">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="empty">
+                    </span>
+                </div>
+                <div class="content">
+                    <p>Attack on Titan</p>
+                 <p class = "author">Hajime Isayama</p>
+                </div>
+            </a>
+            </div>
+
+            <div class="item">
+                <a href="/manga/Jojo.html">
+                <img class="avatar" src="img/JoJo.jpg" alt="">
+                <div class="star">
+                    <span class="full">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="empty">
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                </div>
+                <div class="content">
+                    <p>JoJo’s Bizarre Adventure</p>
+                  <p class = "author">Hirohiko Araki</p>
+                </div>
+            </a>
+            </div>
+
+            <div class="item">
+
+                <a href="/manga/DeathNote.html">
+                <img class="avatar" src="img/Death-Note.jpg" alt="">
+                <div class="star">
+                    <span class="full">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="empty">
+                    </span>
+                </div>
+                <div class="content">
+                    <p>Death Note</p>
+                    <p class = "author">Tsugumi Ohba</p>
+                </div>
+                
+            </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="direction2">
+        <button id="next3"><img src="/main_page/img/right_button.svg" alt=""></button>
+    </div>
+</div>
+</div>
+<div class="footer">
+        <div class="left_box">
+            <h4>Follow the news</h4>
+            <div class="con">
+                <a class = "hov" href="https://t.me/cernvery" target="_blank"><span class="fab fa-telegram"></span></a>
+                <a class = "hov" href="https://www.instagram.com" target="_blank"><span class="fab fa-instagram"></span></a>
+                <a class = "hov" href="https://www.youtube.com" target="_blank"><span class="fab fa-youtube"></span></a>
+                <a class = "hov" href="https://github.com/Omargali/FinalProject.git" target="_blank"><span class="fab fa-github"></span></a>
+            </div>
+        </div>
+
+        <div class="center_box">
+            <h4>Support service</h4>
+            <div class="con">
+                <span><a href="mailto:finalproject@gmail.com">support@libstore.sdu</a></span>
+                <span><a href="tel:+79993339999">8 747 210 10 70</a></span>
+            </div>
+        </div>
+        <div class="right_box">
+            <h4>We accept for payment</h4>
+            <div class="con">
+                <span><a href="https://kaspi.kz" target="_blank"><img src="img/app-icon.png" alt="" width="30px">
+                </a></span>
+
+                <span><a href="https://www.paypal.com/ru/home" target="_blank"><img src="img/icons8-paypal.svg" alt="" width="30px"></a></span>
+
+                <span><a href="https://www.visa.com.kz/ru_KZ" target="_blank"><img src="img/icons8-виза.svg" alt="" width="30px"></a></span>
+                <span> <a href="https://www.mastercard.kz/ru-kz.html" target="_blank"><img src="img/icons8-логотип-mastercard.svg" alt="" width="30px"></a></span>
+  
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
